@@ -1,0 +1,125 @@
+body {
+  height: 100vh;
+  background: #25575f;
+  background: linear-gradient(139deg,#064c57cb 10%,#05509679 100%);
+  font-family: sans-serif;
+  box-sizing: content-box; 
+}
+  
+.container {
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.todo_list {
+  max-width: 600px;
+  min-width: 450px;
+  display: block;
+  margin: 0 auto 40px;
+  background-color: #1ba39c46;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px 0 #074b83;
+}
+  
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 30px; 
+}
+  
+.create_new_todo {
+  display: flex;
+  justify-content: space-between;
+  text-align: center; 
+}
+
+input[type=text] {
+  width: 80%;
+  padding: 10px; 
+}
+
+.btn {
+  padding: 10px;
+  cursor: pointer;
+  width: 15%;
+  min-width: 15%;
+  height: 35px;
+  background:#cbc7e2;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding-top: 6px;
+}
+
+.js-add-btn {
+  margin-top: 0px;
+  width: 20%;
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+  
+.js-items-list {
+  padding-left: 0; 
+}
+
+.todoLi {
+  padding: 1em;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.js-items-list li:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+  
+input[type=checkbox], label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer; 
+}
+
+input[type=checkbox] + label:before {
+  content: '';
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center; 
+}
+
+input[type=checkbox]:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 5px;
+  border: solid blue;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  border-radius: 0;
+  margin: 0 15px 5px 5px; 
+}
+
+input[type="checkbox" i] {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.liBgrd{
+  background-color: rgba(24, 9, 241, 0.226);
+}
+
+.js-label {
+  background: none;
+}
