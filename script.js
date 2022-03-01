@@ -9,8 +9,6 @@ if(localStorage.getItem('itemsLocal')){
     itemsLocal = JSON.parse(localStorage.getItem('itemsLocal'));
 };
 
-
-
 addButtonNode.addEventListener('click', () => {
     const item = {
         id: `${Math.random()}`,
@@ -23,7 +21,7 @@ addButtonNode.addEventListener('click', () => {
     if(inputNode.value == "") return;
     itemsLocal.push(item);
     render();
-    localStorage.setItem('itemsLocal',  JSON.stringify(itemsLocal));
+    updateStorage()
     inputNode.value = "";
 });
 
@@ -33,7 +31,6 @@ function toggleImportantById(id) {
             item.important = !item.important;
         }
     })
-
     console.log(itemsLocal);
 }
 
@@ -47,7 +44,6 @@ function deleteItem(id) {
 
 function updateStorage() {
     localStorage.setItem('itemsLocal',  JSON.stringify(itemsLocal));
-
 }
  
 function render() {
@@ -70,7 +66,6 @@ itemsListNode.addEventListener('click', (e) => {
     updateStorage();
 });
 
-
 wrapper.addEventListener('dblclick', function(event){
     const target = event.target;
     const id = target.dataset.id;
@@ -87,7 +82,7 @@ itemsListNode.addEventListener('click', (event) => {
     const id = event.target.dataset.id;
     deleteItem(id);
     render();
-    localStorage.setItem('itemsLocal',  JSON.stringify(itemsLocal));
+    updateStorage()
 });
 
 render();
