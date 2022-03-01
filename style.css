@@ -148,6 +148,7 @@ input[type="checkbox" i] {
   .btn {
     font-size: 13px;
     width: auto;
+    min-width: 18%;
 }
 
 input[type=checkbox] + label:before {
