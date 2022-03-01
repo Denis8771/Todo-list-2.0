@@ -117,9 +117,47 @@ input[type="checkbox" i] {
 }
 
 .liBgrd{
-  background-color: rgba(24, 9, 241, 0.226);
+  background: linear-gradient(139deg,#09570663 10%,#4cf00079 100%);
 }
 
 .js-label {
   background: none;
 }
+
+@media (max-width: 575px) { 
+
+  .container {
+    padding-top: 35px;
+  }
+
+  .todo_list {
+    max-width: 98%;
+    min-width: 350px;
+    padding: 10px;
+  }
+
+  .todoLi {
+    padding: 8px;
+
+  }
+
+  .js-label {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 13px;
+    width: auto;
+}
+
+input[type=checkbox] + label:before {
+  vertical-align: bottom;
+  padding: 1px;
+
+}
+
+.todoLi {
+  padding: 12px 8px;
+}
+}
+
