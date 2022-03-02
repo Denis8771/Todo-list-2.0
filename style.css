@@ -124,6 +124,21 @@ input[type="checkbox" i] {
   background: none;
 }
 
+.todo-animation {
+  background: linear-gradient(to right, #ffffff, green, rgba(0, 255, 255, 0.966), rgba(0, 174, 255, 0.521));
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: rainbow 30s ease infinite;
+  animation: rainbow 20s ease infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
 @media (max-width: 575px) { 
 
   .container {
@@ -138,7 +153,6 @@ input[type="checkbox" i] {
 
   .todoLi {
     padding: 8px;
-
   }
 
   .js-label {
@@ -149,16 +163,15 @@ input[type="checkbox" i] {
     font-size: 13px;
     width: auto;
     min-width: 18%;
-}
+  }
 
-input[type=checkbox] + label:before {
-  vertical-align: bottom;
-  padding: 1px;
+  input[type=checkbox] + label:before {
+    vertical-align: bottom;
+    padding: 1px;
+  }
 
-}
-
-.todoLi {
-  padding: 12px 8px;
-}
+  .todoLi {
+    padding: 12px 8px;
+  }
 }
 
